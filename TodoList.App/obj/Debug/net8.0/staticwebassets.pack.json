@@ -1,0 +1,65 @@
+{
+  "Files": [
+    {
+      "Id": "c:\\char2024\\TodoList\\TodoList.App\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "c:\\char2024\\TodoList\\TodoList.App\\obj\\Debug\\net8.0\\compressed\\9ttfzfcguf.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "c:\\char2024\\TodoList\\TodoList.App\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TodoList.App.styles.css",
+      "PackagePath": "staticwebassets\\TodoList.App.styles.css"
+    },
+    {
+      "Id": "c:\\char2024\\TodoList\\TodoList.App\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "c:\\char2024\\TodoList\\TodoList.App\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "c:\\char2024\\TodoList\\TodoList.App\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "c:\\char2024\\TodoList\\TodoList.App\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "c:\\char2024\\TodoList\\TodoList.App\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "c:\\char2024\\TodoList\\TodoList.App\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "c:\\char2024\\TodoList\\TodoList.App\\wwwroot\\js\\LocalStorageAccessor.js",
+      "PackagePath": "staticwebassets\\js\\LocalStorageAccessor.js"
+    },
+    {
+      "Id": "c:\\char2024\\TodoList\\TodoList.App\\wwwroot\\sample-data\\weather.json",
+      "PackagePath": "staticwebassets\\sample-data\\weather.json"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.TodoList.App.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.TodoList.App.props",
+      "PackagePath": "build\\TodoList.App.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.TodoList.App.props",
+      "PackagePath": "buildMultiTargeting\\TodoList.App.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.TodoList.App.props",
+      "PackagePath": "buildTransitive\\TodoList.App.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

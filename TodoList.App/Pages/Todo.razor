@@ -1,0 +1,30 @@
+﻿@page "/todo"
+@using global::TodoList.App
+@using global::TodoList.App.DTO
+@inject LocalStorageAccessor LocalStorageAccessor // probeer-le d'una instancia d'una classe
+
+<PageTitle>Todo</PageTitle>
+
+<h1>Todo</h1>
+@foreach(TodoTask item in tasks){
+    <p><input type="checkbox" @bind="item.Completed" /> @item</p>
+}
+<input type="text" @bind="TaskText" />
+<button class="btn btn-primary" @onclick="AddtaskAsync">Afegir</button>
+
+@code {
+    private List<TodoTask> tasks = new();
+    private string? TaskText{get; set;}
+
+    protected override async Task OnAfterRenderAsync(bool firstRender) {
+        if(firstRender) {
+            var storageTasks = await LocalStorageAccessor.GetValueAsync<List<TodoTask>>("todos");
+            foreach(TodoTask t in storageTasks) tasks.Add(t);
+        }
+    }
+    private async Task AddtaskAsync() {
+        tasks.Add(new TodoTask {Text = TaskText});
+        await LocalStorageAccessor.SetValueAsync<List<TodoTask>>("todos", tasks);
+        TaskText = "";
+    }
+}
