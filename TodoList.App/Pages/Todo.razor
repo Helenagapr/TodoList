@@ -1,4 +1,6 @@
 ﻿@page "/todo"
+@rendermode @(new InteractiveAutoRenderMode(prerender: false))
+@using Microsoft.AspNetCore.Components.Web
 @using global::TodoList.App
 @using global::TodoList.App.DTO
 @inject LocalStorageAccessor LocalStorageAccessor // probeer-le d'una instancia d'una classe
@@ -20,6 +22,7 @@
         if(firstRender) {
             var storageTasks = await LocalStorageAccessor.GetValueAsync<List<TodoTask>>("todos");
             foreach(TodoTask t in storageTasks) tasks.Add(t);
+            StateHasChanged();
         }
     }
     private async Task AddtaskAsync() {

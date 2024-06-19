@@ -1029,3 +1029,4 @@ c:\char2024\TodoList\TodoList.App\obj\Debug\net8.0\compressed\om54tluagd.gz
 c:\char2024\TodoList\TodoList.App\obj\Debug\net8.0\compressed\fpbqwp0lo0.gz
 c:\char2024\TodoList\TodoList.App\obj\Debug\net8.0\compressed\6xg5g1p4s9.gz
 c:\char2024\TodoList\TodoList.App\obj\Debug\net8.0\compressed\7nitpcolse.gz
+c:\char2024\TodoList\TodoList.App\obj\Debug\net8.0\TodoList.App.sourcelink.json
