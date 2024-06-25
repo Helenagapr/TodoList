@@ -13,43 +13,43 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = TodoList.App
 build_property.RootNamespace = TodoList.App
-build_property.ProjectDir = C:\char2024\TodoList\TodoList.App\
+build_property.ProjectDir = c:\char2024\TodoList\TodoList.App\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = false
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\char2024\TodoList\TodoList.App
+build_property.MSBuildProjectDirectory = c:\char2024\TodoList\TodoList.App
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/char2024/TodoList/TodoList.App/App.razor]
+[c:/char2024/TodoList/TodoList.App/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/char2024/TodoList/TodoList.App/Pages/Counter.razor]
+[c:/char2024/TodoList/TodoList.App/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/char2024/TodoList/TodoList.App/Pages/Home.razor]
+[c:/char2024/TodoList/TodoList.App/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/char2024/TodoList/TodoList.App/Pages/Todo.razor]
+[c:/char2024/TodoList/TodoList.App/Pages/Todo.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVG9kby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/char2024/TodoList/TodoList.App/Pages/Weather.razor]
+[c:/char2024/TodoList/TodoList.App/Pages/Weather.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2VhdGhlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/char2024/TodoList/TodoList.App/_Imports.razor]
+[c:/char2024/TodoList/TodoList.App/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/char2024/TodoList/TodoList.App/Layout/MainLayout.razor]
+[c:/char2024/TodoList/TodoList.App/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-dn7em0jan3
 
-[C:/char2024/TodoList/TodoList.App/Layout/NavMenu.razor]
+[c:/char2024/TodoList/TodoList.App/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-tv6iihl0ct
