@@ -6,7 +6,10 @@ using TodoList.DTO;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+builder.Services.AddCors(opt => opt.AddDefaultPolicy(policy => 
+policy.AllowAnyHeader()
+.AllowAnyMethod()
+.AllowAnyOrigin()));
 builder.Services.AddControllers();
 builder.Services.AddDbContext<TodoContext>(opt =>
     opt.UseInMemoryDatabase("TodoList"));
@@ -27,6 +30,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors();
 
 app.UseAuthorization();
 
