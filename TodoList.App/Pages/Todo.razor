@@ -1,15 +1,15 @@
 ﻿@page "/todo"
-@rendermode @(new InteractiveAutoRenderMode(prerender: false))
-@using Microsoft.AspNetCore.Components.Web
+
 @using global::TodoList.App
-@using global::TodoList.App.DTO
+@using global::TodoList.DTO
 @inject LocalStorageAccessor LocalStorageAccessor // probeer-le d'una instancia d'una classe
+@inject HttpClient Http
 
 <PageTitle>Todo</PageTitle>
 
 <h1>Todo</h1>
 @foreach(TodoTask item in tasks){
-    <p><input type="checkbox" @bind="item.Completed" @onclick = "SaveAsync" /> @item</p>
+    <p><input type="checkbox" @bind="item.IsComplete" @onclick = "SaveAsync" /> @item</p>
 }
 <input type="text" @bind="TaskText" />
 <button class="btn btn-primary" @onclick="AddtaskAsync">Afegir</button>
@@ -20,8 +20,7 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender) {
         if(firstRender) {
-            var storageTasks = await LocalStorageAccessor.GetValueAsync<List<TodoTask>>("todos");
-            foreach(TodoTask t in storageTasks) tasks.Add(t);
+            tasks = await Http.GetFromJsonAsync<List<TodoTask>>("https://localhost:7286/api/TodoItems");
             StateHasChanged();
         }
     }
@@ -32,7 +31,7 @@
         await LocalStorageAccessor.SetValueAsync<List<TodoTask>>("todos", tasks);
     }
     private async Task AddtaskAsync() {
-        tasks.Add(new TodoTask {Text = TaskText});
+        tasks.Add(new TodoTask {Name = TaskText});
         await LocalStorageAccessor.SetValueAsync<List<TodoTask>>("todos", tasks);
         TaskText = "";
     }

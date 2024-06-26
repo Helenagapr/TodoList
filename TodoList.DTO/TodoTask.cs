@@ -1,8 +1,9 @@
-namespace TodoList.App.DTO {
+namespace TodoList.DTO {
     public class TodoTask {
-        public string? Text {get; init;}
-        public bool Completed {get; set; } = false;
-        public override string ToString() => Text ?? string.Empty;
+        public long Id { get; set; }
+        public string? Name { get; set; }
+        public bool IsComplete { get; set; }
+        public override string ToString() => Name ?? string.Empty;
 
         /*
         public override string ToString() {

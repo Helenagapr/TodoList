@@ -1030,3 +1030,12 @@ c:\char2024\TodoList\TodoList.App\obj\Debug\net8.0\compressed\fpbqwp0lo0.gz
 c:\char2024\TodoList\TodoList.App\obj\Debug\net8.0\compressed\6xg5g1p4s9.gz
 c:\char2024\TodoList\TodoList.App\obj\Debug\net8.0\compressed\7nitpcolse.gz
 c:\char2024\TodoList\TodoList.App\obj\Debug\net8.0\TodoList.App.sourcelink.json
+c:\char2024\TodoList\TodoList.App\bin\Debug\net8.0\wwwroot\_framework\TodoList.DTO.pdb
+c:\char2024\TodoList\TodoList.App\bin\Debug\net8.0\wwwroot\_framework\TodoList.DTO.wasm
+c:\char2024\TodoList\TodoList.App\bin\Debug\net8.0\wwwroot\_framework\TodoList.DTO.wasm.gz
+c:\char2024\TodoList\TodoList.App\bin\Debug\net8.0\wwwroot\_framework\TodoList.DTO.pdb.gz
+c:\char2024\TodoList\TodoList.App\bin\Debug\net8.0\TodoList.DTO.dll
+c:\char2024\TodoList\TodoList.App\bin\Debug\net8.0\TodoList.DTO.pdb
+c:\char2024\TodoList\TodoList.App\obj\Debug\net8.0\webcil\TodoList.DTO.wasm
+c:\char2024\TodoList\TodoList.App\obj\Debug\net8.0\compressed\iif9ckp1g4.gz
+c:\char2024\TodoList\TodoList.App\obj\Debug\net8.0\compressed\k2gpvgi6ov.gz
