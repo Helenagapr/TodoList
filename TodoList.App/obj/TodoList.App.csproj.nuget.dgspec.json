@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\char2024\\TodoList\\TodoList.App\\TodoList.App.csproj": {}
+    "c:\\char2024\\TodoList\\TodoList.App\\TodoList.App.csproj": {}
   },
   "projects": {
-    "C:\\char2024\\TodoList\\TodoList.App\\TodoList.App.csproj": {
+    "c:\\char2024\\TodoList\\TodoList.App\\TodoList.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\char2024\\TodoList\\TodoList.App\\TodoList.App.csproj",
+        "projectUniqueName": "c:\\char2024\\TodoList\\TodoList.App\\TodoList.App.csproj",
         "projectName": "TodoList.App",
-        "projectPath": "C:\\char2024\\TodoList\\TodoList.App\\TodoList.App.csproj",
+        "projectPath": "c:\\char2024\\TodoList\\TodoList.App\\TodoList.App.csproj",
         "packagesPath": "C:\\Users\\helena.garcia.ext\\.nuget\\packages\\",
-        "outputPath": "C:\\char2024\\TodoList\\TodoList.App\\obj\\",
+        "outputPath": "c:\\char2024\\TodoList\\TodoList.App\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\helena.garcia.ext\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\char2024\\TodoList\\TodoList.DTO\\TodoList.DTO.csproj": {
-                "projectPath": "C:\\char2024\\TodoList\\TodoList.DTO\\TodoList.DTO.csproj"
+              "c:\\char2024\\TodoList\\TodoList.DTO\\TodoList.DTO.csproj": {
+                "projectPath": "c:\\char2024\\TodoList\\TodoList.DTO\\TodoList.DTO.csproj"
               }
             }
           }
@@ -100,14 +100,14 @@
         }
       }
     },
-    "C:\\char2024\\TodoList\\TodoList.DTO\\TodoList.DTO.csproj": {
+    "c:\\char2024\\TodoList\\TodoList.DTO\\TodoList.DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\char2024\\TodoList\\TodoList.DTO\\TodoList.DTO.csproj",
+        "projectUniqueName": "c:\\char2024\\TodoList\\TodoList.DTO\\TodoList.DTO.csproj",
         "projectName": "TodoList.DTO",
-        "projectPath": "C:\\char2024\\TodoList\\TodoList.DTO\\TodoList.DTO.csproj",
+        "projectPath": "c:\\char2024\\TodoList\\TodoList.DTO\\TodoList.DTO.csproj",
         "packagesPath": "C:\\Users\\helena.garcia.ext\\.nuget\\packages\\",
-        "outputPath": "C:\\char2024\\TodoList\\TodoList.DTO\\obj\\",
+        "outputPath": "c:\\char2024\\TodoList\\TodoList.DTO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\helena.garcia.ext\\AppData\\Roaming\\NuGet\\NuGet.Config"

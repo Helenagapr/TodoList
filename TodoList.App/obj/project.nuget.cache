@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "c5hmCNDc1rs=",
+  "dgSpecHash": "00XkSNclQV4=",
   "success": true,
-  "projectFilePath": "C:\\char2024\\TodoList\\TodoList.App\\TodoList.App.csproj",
+  "projectFilePath": "c:\\char2024\\TodoList\\TodoList.App\\TodoList.App.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\helena.garcia.ext\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.6\\microsoft.aspnetcore.authorization.8.0.6.nupkg.sha512",
     "C:\\Users\\helena.garcia.ext\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.6\\microsoft.aspnetcore.components.8.0.6.nupkg.sha512",
