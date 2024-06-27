@@ -9,16 +9,15 @@ h1:focus {
 a, .btn-link {
     color: #0071c1;
 }
-.btn-delete {
-    color:#fff;
-    background-color:#b32121;
-    border-color:#c02d76;
-
-}
 .btn-primary {
     color: #fff;
     background-color: #1b6ec2;
     border-color: #1861ac;
+}
+.btn-secondary {
+    color: #fff;
+    background-color: #e21313;
+    border-color: #e45151;
 }
 
 

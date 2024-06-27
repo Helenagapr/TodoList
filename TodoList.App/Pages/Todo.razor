@@ -11,7 +11,7 @@
 @foreach(TodoTask item in tasks){
     <p>
         <input type="checkbox" @bind="item.IsComplete" @onclick = "@(async() => await SaveAsync(item))" /> @item
-        <button class="btn-delete" @onclick="@(async () => await DeleteTaskAsync(item))">Eliminar</button>
+        <button class="btn btn-secondary" @onclick="@(async () => await DeleteTaskAsync(item))">Eliminar</button>
     </p>
 }
 <input type="text" @bind="TaskText" />
