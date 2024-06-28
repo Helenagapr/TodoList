@@ -17,7 +17,16 @@ a, .btn-link {
 .btn-secondary {
     color: #fff;
     background-color: #e21313;
-    border-color: #e45151;
+    border: 2px solid #dd1212;
+    border-radius: 0; /* Bordes cuadrados */
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* Añadir profundidad */
+    transition: transform 0.1s ease; /* Suavizar la animación */
+    width: 5px;
+    height: 10px;
+
 }
 
 
