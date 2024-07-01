@@ -11,15 +11,15 @@
 @foreach(TodoTask item in tasks){
     <p>
         <input type="checkbox" @bind="item.IsComplete" @onclick = "() => SaveAsync(item)" /> @item
-        <button class="btn btn-secondary" @onclick="() => DeleteTaskAsync(item)">Eliminar</button>
+        <button style="border-radius: 7px;" class="btn btn-secondary btn-sm" @onclick="() => DeleteTaskAsync(item)">Delete</button>
     </p>
 }
 <form @onsubmit="HandleSubmitAsync">
     <p>
 
     <input type="text" @bind="TaskText" />
-        <button type="submit" class="btn btn-primary">Afegir</button>
-        <button style= "border-radius: 20px;" class="btn btn-secondary" @onclick="DeleteAllTasksAsync">Eliminar Todos</button>
+        <button type="submit" style= "border-radius: 7px;" class="btn btn-primary">Add</button>
+        <button style= "border-radius: 7px;" class="btn btn-secondary" @onclick="DeleteAllTasksAsync">Delete All</button>
     </p>
 </form>
     
