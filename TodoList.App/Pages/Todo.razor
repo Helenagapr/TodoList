@@ -10,17 +10,32 @@
 <h1>To Do List</h1>
 @foreach(TodoTask item in tasks){
     <p>
-        <input type="checkbox" @bind="item.IsComplete" @onclick = "@(async() => await SaveAsync(item))" /> @item
-        <button class="btn btn-secondary" @onclick="@(async () => await DeleteTaskAsync(item))">Eliminar</button>
+        <input type="checkbox" @bind="item.IsComplete" @onclick = "() => SaveAsync(item)" /> @item
+        <button class="btn btn-secondary" @onclick="() => DeleteTaskAsync(item)">Eliminar</button>
     </p>
 }
-<input type="text" @bind="TaskText" />
-<button class="btn btn-primary" @onclick="AddtaskAsync">Afegir</button>
+<form @onsubmit="HandleSubmitAsync">
+    <p>
+
+    <input type="text" @bind="TaskText" />
+        <button type="submit" class="btn btn-primary">Afegir</button>
+        <button style= "border-radius: 20px;" class="btn btn-secondary" @onclick="DeleteAllTasksAsync">Eliminar Todos</button>
+    </p>
+</form>
+    
 
 @code {
     private List<TodoTask> tasks = new();
     private string? TaskText{get; set;}
 
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadTaskAsync();
+    }
+    private async Task LoadTaskAsync()
+    {
+        tasks = await Http.GetFromJsonAsync<List<TodoTask>>("https://localhost:7286/api/TodoItems");
+    }
     protected override async Task OnAfterRenderAsync(bool firstRender) {
         if(firstRender) {
             tasks = await Http.GetFromJsonAsync<List<TodoTask>>("https://localhost:7286/api/TodoItems");
@@ -28,24 +43,40 @@
         }
     }
 
+
     private async Task SaveAsync(TodoTask item) {
         // ESTA FEO NO HACER
-        await Task.Delay(1);
+
         await Http.PutAsJsonAsync($"https://localhost:7286/api/TodoItems/{item.Id}", item);
-        
+
         //await LocalStorageAccessor.SetValueAsync<List<TodoTask>>("todos", tasks);
     }
-    private async Task AddtaskAsync() {
+    private async Task AddTaskAsync() {
         var task = new TodoTask {Name = TaskText};
         tasks.Add(task);
         await Http.PostAsJsonAsync("https://localhost:7286/api/TodoItems", task);
         TaskText = "";
+        await LoadTaskAsync();
+    }
+    private async Task HandleSubmitAsync()
+    {
+        await AddTaskAsync();
     }
 
     private async Task DeleteTaskAsync(TodoTask item)
     {
         tasks.Remove(item);
         await Http.DeleteAsync($"https://localhost:7286/api/TodoItems/{item.Id}");
+        StateHasChanged();
+    }
+    private async Task DeleteAllTasksAsync()
+    {
+        foreach (var item in tasks.ToList())
+        {
+            await Http.DeleteAsync($"https://localhost:7286/api/TodoItems/{item.Id}");
+        }
+        tasks.Clear();
+        StateHasChanged();
     }
 
     

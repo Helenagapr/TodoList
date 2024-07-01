@@ -118,7 +118,15 @@ public class TodoItemsController : ControllerBase
 
         return NoContent();
     }
-
+    [HttpDelete]
+    [Route("DeleteAll")]
+    public async Task<IActionResult> DeleteAllTodoItems()
+    {
+        var allTasks = await _context.TodoItems.ToListAsync();
+        _context.TodoItems.RemoveRange(allTasks);
+        await _context.SaveChangesAsync();
+        return NoContent();
+    }
     private bool TodoItemExists(long id)
     {
         return _context.TodoItems.Any(e => e.Id == id);
