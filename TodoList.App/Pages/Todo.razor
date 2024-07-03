@@ -8,12 +8,19 @@
 <PageTitle>Todo</PageTitle>
 
 <h1>To Do List</h1>
+<ol>
 @foreach(TodoTask item in tasks){
-    <p>
-        <input type="checkbox" @bind="item.IsComplete" @onclick = "() => SaveAsync(item)" /> @item
-        <button style="border-radius: 7px;" class="btn btn-secondary btn-sm" @onclick="() => DeleteTaskAsync(item)">Delete</button>
-    </p>
+    <li>
+        <p>
+            <div class="task-item">
+                @item.Name
+                <span class="task-text"><input type="checkbox" @bind="item.IsComplete" @onclick="() => SaveAsync(item)"/></span>
+                <button style="border-radius: 7px;" class="btn btn-secondary btn-sm" @onclick="() => DeleteTaskAsync(item)">Delete</button>
+            </div>
+        </p>
+   </li>
 }
+</ol>
 <form @onsubmit="HandleSubmitAsync">
     <p>
 
@@ -52,11 +59,14 @@
         //await LocalStorageAccessor.SetValueAsync<List<TodoTask>>("todos", tasks);
     }
     private async Task AddTaskAsync() {
-        var task = new TodoTask {Name = TaskText};
-        tasks.Add(task);
-        await Http.PostAsJsonAsync("https://localhost:7286/api/TodoItems", task);
-        TaskText = "";
-        await LoadTaskAsync();
+        if (!string.IsNullOrWhiteSpace(TaskText))
+        {
+            var task = new TodoTask { Name = TaskText };
+            tasks.Add(task);
+            await Http.PostAsJsonAsync("https://localhost:7286/api/TodoItems", task);
+            TaskText = "";
+            await LoadTaskAsync();
+        }
     }
     private async Task HandleSubmitAsync()
     {
@@ -67,6 +77,7 @@
     {
         tasks.Remove(item);
         await Http.DeleteAsync($"https://localhost:7286/api/TodoItems/{item.Id}");
+        await LoadTaskAsync();
         StateHasChanged();
     }
     private async Task DeleteAllTasksAsync()
@@ -76,6 +87,7 @@
             await Http.DeleteAsync($"https://localhost:7286/api/TodoItems/{item.Id}");
         }
         tasks.Clear();
+        await LoadTaskAsync();
         StateHasChanged();
     }
 

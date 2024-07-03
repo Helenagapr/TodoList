@@ -10,14 +10,22 @@ builder.Services.AddCors(opt => opt.AddDefaultPolicy(policy =>
 policy.AllowAnyHeader()
 .AllowAnyMethod()
 .AllowAnyOrigin()));
+/*
+builder.Services.AddDbContext<TodoContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("TodoDatabase"))); */
 builder.Services.AddControllers();
+
 builder.Services.AddDbContext<TodoContext>(opt =>
-    opt.UseInMemoryDatabase("TodoList"));
+    opt.UseInMemoryDatabase("TodoList")); 
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddAutoMapper(cfg => {
+builder.Services.AddAutoMapper(cfg =>
+{
     cfg.CreateMap<TodoTask, TodoItem>().ReverseMap();
+    // Mapeo entre TodoListDto (DTO) y TodoList (Entidad)
+    //cfg.CreateMap<TodoListDto, TodoLists>().ReverseMap();
 });
 
 var app = builder.Build();
@@ -27,6 +35,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+   // app.UseDeveloperExceptionPage();
 }
 
 app.UseHttpsRedirection();
